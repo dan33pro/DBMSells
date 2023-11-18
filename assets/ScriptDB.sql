@@ -96,3 +96,7 @@ INSERT INTO Roles (id_rol, nombreRol) VALUES(null, "Entregador");
 INSERT INTO Estados  (id_estado, estado) VALUES(null, "Regsitrado");
 INSERT INTO Estados  (id_estado, estado) VALUES(null, "Entregado");
 INSERT INTO Estados  (id_estado, estado) VALUES(null, "Devuelto");
+
+-- Modificaciones
+ALTER TABLE Autenticacion DROP FOREIGN KEY Autenticacion_ibfk_1;
+ALTER TABLE Autenticacion ADD CONSTRAINT Autenticacion_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE;
