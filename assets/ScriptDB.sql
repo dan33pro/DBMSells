@@ -97,6 +97,10 @@ INSERT INTO Estados  (id_estado, estado) VALUES(null, "Regsitrado");
 INSERT INTO Estados  (id_estado, estado) VALUES(null, "Entregado");
 INSERT INTO Estados  (id_estado, estado) VALUES(null, "Devuelto");
 
+INSERT INTO TiposProducto  (id_tipo_producto, detalle) VALUES(null, "Abarrotes");
+INSERT INTO TiposProducto  (id_tipo_producto, detalle) VALUES(null, "Dulceria");
+INSERT INTO TiposProducto  (id_tipo_producto, detalle) VALUES(null, "Aseo");
+
 -- Modificaciones
 ALTER TABLE Autenticacion DROP FOREIGN KEY Autenticacion_ibfk_1;
 ALTER TABLE Autenticacion ADD CONSTRAINT Autenticacion_ibfk_1 FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE; 
