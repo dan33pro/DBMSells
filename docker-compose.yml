@@ -10,3 +10,5 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
       - "3306:3306"
+    volumes:
+      - ./assets/ScriptDB.sql:/docker-entrypoint-initdb.d/ScriptDB.sql
